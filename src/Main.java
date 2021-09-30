@@ -16,6 +16,8 @@ public class Main
         th2.start();
     }
 
+    //Fragen Beantworten
     // Bei öfteren Durchläufen fällt auf das sich die Threads immer mehr untereinandere Vermischen
+    //Bei weniger Durchläufen ist die Performance besser und somit läuft es Nacheinanderer und nicht durchmischt
 
 }
