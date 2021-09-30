@@ -3,18 +3,24 @@ import java.util.Date;
 
 public class DatePrinter implements Runnable
 {
-    public DatePrinter()
+    private int i = 0;
+    private int limit;
+
+    public DatePrinter(int limit)
     {
-        this.run();
+        this.limit = limit;
     }
 
     @Override
     public void run()
     {
-        while(true) {
+
+        while(i <= limit) {
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
             Date date = new Date(System.currentTimeMillis());
             System.out.println(formatter.format(date));
+
+            i++;
         }
     }
 }
